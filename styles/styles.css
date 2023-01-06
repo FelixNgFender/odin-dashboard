@@ -1,0 +1,27 @@
+:root {
+  /* Color palette */
+  --form-bg-color: #57370d81;
+  --primary-text-color: #d7ccc1;
+  --secondary-text-color: #ffffff;
+  --accent-text-color: #53881f;
+  --button-color: #214054;
+  --invalid-color: #c80a0a;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-text-color);
+}
