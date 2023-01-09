@@ -5,7 +5,9 @@
   --button-color: #17a2ff;
   --sidebar-bg-color: #0080ff;
   --sidebar-text-color: #fcfcfc;
-  
+  --post-grid-bg-color: #ff00ffa4;
+  --post-title-color: #000000;
+
 }
 
 html {
@@ -67,7 +69,7 @@ body {
 
 .header-profileIconSmall,
 .header-notificationIcon {
-  transform: scale(0.8);
+  transform: scale(0.6);
 }
 
 .header-welcomeContainer {
@@ -151,6 +153,98 @@ body {
 
 .sidebar-links:nth-child(7) {
   margin-bottom: 40px;
+}
+
+.mainContent {
+  padding: 20px;
+  display: grid;
+  grid-template: auto 1fr / 4fr 1fr;
+}
+
+.mainContent-repos {
+  margin-right: 20px;
+  grid-row: 1 / 3;
+}
+
+.mainContent-sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mainContent-repoGrid {
+  height: 90%;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  gap: 20px;
+}
+
+.mainContent-repoBox {
+  background-color: var(--repo-box-color);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #00000023;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mainContent-repoName {
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: #0077CC;
+}
+
+.mainContent-repoDescription {
+  padding: 10px 20px;
+}
+
+.mainContent-repoLink {
+  color: #0077CC;
+  text-decoration: none;
+  margin-top: auto;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 128, 0, 0.202);
+}
+
+.mainContent-repoLink:hover {
+  color: #006699;
+}
+
+.mainContent-trendingPostGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--post-grid-bg-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.mainContent-trendingPostItem {
+  display: flex;
+  align-items: center;
+}
+
+.mainContent-trendingPostThumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.mainContent-trendingPostLink {
+  text-decoration: none;
+  color: var(--post-title-color);
+}
+
+.mainContent-trendingPostLink:hover {
+  color: var(--post-title-hover-color);
+}
+
+.mainContent-interacted h2 {
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 600px) {

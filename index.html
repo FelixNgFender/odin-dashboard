@@ -7,7 +7,9 @@
     <title>Felix Dashboard</title>
     <link rel="stylesheet" href="styles/styles-reset.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="js/script.js"></script>
+    <script src="js/fetchRepos.js"></script>
+    <script src="js/fetchTrendingPosts.js"></script>
+    <script src="js/fetchSubreddits.js"></script>
   </head>
   <body>
     <section class="header">
@@ -131,7 +133,25 @@
         <span>Privacy</span>
       </a>
     </section>
-
-    <section class="main-content"></section>
+    <section class="mainContent">
+      <div class="mainContent-repos">
+        <h2 class="mainContent-sectionTitle">Your Repositories</h2>
+        <div class="mainContent-repoGrid" id="mainContent-repoGrid">
+          <!-- Repo boxes go here -->
+        </div>
+      </div>
+      <div class="mainContent-trending">
+        <h2 class="mainContent-sectionTitle">Trending Posts</h2>
+        <ul class="mainContent-trendingPostGrid" id="mainContent-trendingPostGrid">
+          <!-- Trending posts go here -->
+        </ul>
+      </div>
+      <div class="mainContent-interacted">
+        <h2 class="mainContent-sectionTitle">Top Subreddits</h2>
+        <div class="mainContent-subredditGrid" id="mainContent-subredditGrid">
+          <!-- Subreddit boxes go here -->
+        </div>
+      </div>
+    </section>
   </body>
 </html>
